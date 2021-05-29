@@ -1,7 +1,7 @@
 ﻿using System;
 namespace FibonacciGridGame.Pages
 {
-    public class FibonacciGrid
+    public partial class FibonacciGrid
     {
         public FibonacciGrid()
         {
