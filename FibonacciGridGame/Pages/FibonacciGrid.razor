@@ -1,5 +1,26 @@
-﻿<h3>Component1</h3>
+﻿@page "/fibonacci"
 
-@code {
+<h1>Fibonacci Grid Game</h1>
 
-}
+<table class="table">
+    <tbody>
+        @for (int row = 0; row < GridSize; row++)
+        {
+            var rowLocal = row;
+
+            @for (int col = 0; col < GridSize; col++)
+            {
+                var colLocal = col;
+
+                <button class="btn btn-primary btn-sm" @onclick="@(() => ProcessCellChange(rowLocal, colLocal))">
+
+                    @if (@grid[row, col] > 0)
+                    {
+                        @grid[row, col]
+                    }
+                </button>
+            }
+            <br>
+        }
+    </tbody>
+</table>
